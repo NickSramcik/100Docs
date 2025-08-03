@@ -1,0 +1,42 @@
+---
+// @ts-nocheck
+export async function getStaticPaths() {
+  // Only match Markdown content files
+  const contentFiles = Object.keys(import.meta.glob('../content/!(index).md'));
+  
+  return contentFiles.map(filePath => ({
+    params: {
+      page: filePath
+        .replace('../content/', '')
+        .replace('.md', '')
+    }
+  }));
+}
+
+const titleCase = title => title.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+;
+const { page } = Astro.params;
+
+// Handle static assets by returning 404 for non-markdown routes
+if (!page || page.includes('.')) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  });
+}
+
+const { Content } = await import(`../content/${page}.md`);
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>100Docs - {page}</title>
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.css">
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+  <h1>{titleCase(page)}</h1>
+  <a href="/">← Home</a>
+  <Content /> 
+</body>
+</html>

@@ -1,5 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx'; // Markdown support
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    integrations: [mdx()],
+    markdown: {
+        syntaxHighlight: 'shiki',
+        shikiConfig: { theme: 'github-dark' },
+    },
+});

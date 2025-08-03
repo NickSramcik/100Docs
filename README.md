@@ -44,15 +44,6 @@ That's it! Your changes will be automatically deployed after review.
 
 ||spoiler text||
 ```
-### Code Blocks
-
-Insert code blocks like so:
-\```[language]
-<code here>
-\```
-```js
-let shrek = 'This is my swamp'
-```
 
 ### Advanced Formatting
 

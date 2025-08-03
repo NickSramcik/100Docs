@@ -1,4 +1,4 @@
-# See classes here:
+# See all classes here:
 - https://communitytaught.org/class/all
 
 # Class 1 - Become A Software Engineer For Free

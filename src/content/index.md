@@ -2,6 +2,7 @@
 
 - [Getting Started](/getting-started)
 - [FAQ](/faq)
-- [Projects](/projects)
 - [Classes](/classes)
+- [Projects](/projects)
+- [Blogs](/blogs)
 - [Resources](/resources)

@@ -2,7 +2,7 @@
 
 A simple, collaborative documentation platform for 100Devs built with Astro, Markdown, and hosted on Netlify. Contribute by just adding or editing Markdown files - no complex setup required!
 
-![Live Link](https://100docs.netlify.app/)
+[Live Link](https://100docs.netlify.app/)
 
 ## 🌟 Features
 
